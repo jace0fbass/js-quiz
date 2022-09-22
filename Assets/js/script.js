@@ -9,7 +9,7 @@ $('<button>').text("Start Quiz").appendTo('body')
   //}
 //})
 
-// need to create function to run through these prompts but stop them if they get the answer wrong answer. finish after 5 questions or 1 minute. 
+// need to create function to run through these prompts but stop them if they get the answer wrong answer. finish after 5 questions or 1 minute.
 // need if statements
 
 $('<ol>').text("Commonly used data types DO NOT include:").appendTo('body')
