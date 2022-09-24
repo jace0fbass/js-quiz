@@ -4,13 +4,6 @@ hover effects on list items.
 */
 :root {
     display:flex;
-     center
-
-}
-
-li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+    justify-content: center;
+    text-align: center;
 }
