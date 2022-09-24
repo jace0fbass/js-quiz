@@ -8,7 +8,6 @@
 // display high score rankings.
 var userInput = document.getElementById("#choices")
 var startBtn = document.getElementById("#startBtn")
-var startBtn = document.getElementById("#startBtn")
 var startPage = document.getElementById("#startPage")
 var index = 0
 var score = 0
@@ -64,14 +63,14 @@ if (this.value === quizQuestions[index].correct) {
             li.innerText = choice[0].question[i]
             li.onclick = checkClick
             userInput.appendChild(li)
-            
+            quizRender()
             console.log('loop')
         }
     }
     
+    startBtn.addEventListener("click", startQuiz()); {
 }
 
-startBtn.addEventListener("click", startQuiz()); {
     
 }
 quizRender(quizQuestions[0])

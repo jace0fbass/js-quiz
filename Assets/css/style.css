@@ -7,6 +7,9 @@ hover effects on list items.
     justify-content: center;
     text-align: center;
 }
+* {
+    background-color: beige;
+}
 #startbtn {
     display: flex;
     flex-direction: column;
@@ -16,5 +19,11 @@ hover effects on list items.
 }
 #startpage {
 
+}
+p {
+   border-style: double;
+   border-top-style: none;
+   padding: 10px;
+   margin: 10px;
 }
 
