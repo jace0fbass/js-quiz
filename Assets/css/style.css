@@ -7,10 +7,14 @@ hover effects on list items.
     justify-content: center;
     text-align: center;
 }
-button {
+#startbtn {
     display: flex;
     flex-direction: column;
 }
 .hide {
     display: none;
 }
+#startpage {
+
+}
+

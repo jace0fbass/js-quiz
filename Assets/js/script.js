@@ -6,12 +6,13 @@
 // cache scores .
 // log and rotate 5 highest scores as they change. (how tf?)
 // display high score rankings.
-var userInput = document.querySelector("#choices")
-var startBtn = document.querySelector("#startBtn")
+var userInput = document.getElementById("#choices")
 var startBtn = document.getElementById("#startBtn")
-var startPage = document.querySelector("#startPage")
+var startBtn = document.getElementById("#startBtn")
+var startPage = document.getElementById("#startPage")
 var index = 0
 var score = 0
+var timeLeft = 60
 var container = ""
 var quizQuestions = [{
     question:  "Commonly used data types DO NOT include:",
@@ -41,32 +42,39 @@ var quizQuestions = [{
 ]
 
 function startQuiz() {
-    console.log("im clicked");
-    startPage.setAttribute("class", "hide")
-    
+    console.log("im clicked")
+    // startPage.setAttribute("class", "hide")
+if (this.value === quizQuestions[index].correct) {
+    console.log('Correct!')
+} else {
+    console.log('Incorrect!')
+    timeLeft -= 5;
+}
+
+
     // function to run through the quiz questions
-    function quizRender() {
-        console.log(rendered)
-        var currentQuestion = quizQuestions[index];
-        question.innerText = currentQuestion.question;
-        userInput.innerHTML ="";
+    function quizRender(choice) {
+        var currentQuestion = quizQuestions[index]
+        question.innerText = currentQuestion.question
         
         for (var i = 0; i < currentQuestion.choices.length; i++) {
-            var btnChoice = document.createElement('button');
-            var choice = currentQuestion.choices[index];
-            btnChoice.setAttribute("class", "choice")
-            btnChoice.setAttribute("value", choice)
-            btnChoice.onclick = checkClick;
-            userInput.appendChild(btnChoice);
-            if (btnChoice === quizQuestions('correct')) {
-                quizQuestions++
-            }
-            console.log('loop');
+            var li = document.createElement('li')
+            var choice = quizQuestions.choices[index]
+            li.setAttribute("class", "choice")
+            li.innerText = choice[0].question[i]
+            li.onclick = checkClick
+            userInput.appendChild(li)
+            
+            console.log('loop')
         }
     }
     
-    startBtn.addEventListener("click", startQuiz());
 }
+
+startBtn.addEventListener("click", startQuiz()); {
+    
+}
+quizRender(quizQuestions[0])
 
     //button to start countdown
     
