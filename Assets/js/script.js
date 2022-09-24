@@ -1,7 +1,6 @@
 var jH1 = document.querySelector("jH1")
 var button = document.querySelector("button")
 var userInput = document.querySelector("choices")
-var correct = document.querySelector(quizQuestions === true)
 var index = 0
 
 
@@ -31,33 +30,21 @@ var quizQuestions = [{
     choices: ['Quotes', 'Booleans', 'Alerts', 'Numbers']
 }
 ]
+
 // function to run through the quiz questions
 function quizRender() {
-    var currentQuestion = quizQuestions[i]
-    jH1.innerText = currentQuestion.question
-    userInput.innerHTML ="" //clear loop
-
-    for (i = 0; i < currentQuestion.choices.length; i++) {
-        var li = document.createElement('li')
-        var choice = currentQuestion.choices[i]
-        li.innerText = choice
-        userInput.appendChild(li)
-        console.log('loop')
+    var currentQuestion = quizQuestions[index];
+    question.innerText = currentQuestion.question;
+   userInput.innerHTML ="";
+    
+     for (var i = 0; i < currentQuestion.choices.length; i++) {
+        var li = document.createElement('li');
+       var choice = currentQuestion.choices[index];
+        li.innerText = choice;
+       userInput.appendChild(li);
+       console.log('loop');
     }
 }
-
-button.addEventListener("click", function(t) {
-        i++
-        quizRender()
-                })
-     console.log("button")
-        
-        
-// use prompts that take in user input that has to be correct to proceed.
-// need to create function to run through these prompts but stop them if they get the answer wrong answer. finish after 5 questions or 1 minute.
-// need if statements
-
-
 
 
 //button to start countdown

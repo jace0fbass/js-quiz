@@ -5,22 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript Quiz</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link rel="stylesheet" href="assets\css\style.css"/>
 </head>
 <body>
-    <header>
-<h1 id="jH1">Javascript Quiz</h1>
-    </header>
+    <div class="timebox flex-column"></div>
+    <h1 class="jH1">Javascript Quiz</h1>
+    <form name="quizQuestions" class="jH1">
+    </form>
 
-<section id="timebox">
-    <h2></h2>
+    <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false">
+        Start Quiz
+    </button>
+    <ol></ol>   
+    <br>
+    <!--bootstrap buttons for choices inside of the function. buttons need to be clicked and return the results correct and proceed through quiz or incorrect and not let the user proceed.-->
+    <div class="quizQuestions">
         <p>See how many questions you can answer! Select one of the options listed to enter your answer and progress through the quiz.</p>
-</section>
-<button>Start Quiz</button>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<script src="assets\js\script.js"></script>
+        <button type="button" class="list-group-item list-group-item-action active" aria-current="true">
+            first
+        </button>
+        <button type="button" class="list-group-item list-group-item-action">second</button>
+        <button type="button" class="list-group-item list-group-item-action">third</button>
+    <button type="button" class="list-group-item list-group-item-action">fourth</button>
+  </div>
+  <!--need timer to count down 1 minute-->
+  
+
+
+
 <br>
-<br>
-<footer> &copy;Jason Jones 2022</footer>
+  <footer>&copy;Jason Jones 2022</footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="assets\js\script.js"></script>
+
 </body>
 </html>
+
+<!--
+    GIVEN I am taking a code quiz
+
+WHEN I click the start button
+THEN a timer starts and I am presented with a question
+
+WHEN I answer a question
+THEN I am presented with another question
+
+WHEN I answer a question incorrectly
+THEN time is subtracted from the clock
+
+WHEN all questions are answered or the timer reaches 0
+THEN the game is over
+
+WHEN the game is over
+THEN I can save my initials and my score
+-->
