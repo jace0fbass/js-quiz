@@ -1,11 +1,3 @@
-// make a timer.
-// have timer start on click.
-// display answer result alerts.
-// display final score
-// take in user initials.
-// cache scores .
-// log and rotate 5 highest scores as they change. (how tf?)
-// display high score rankings.
 var userInput = document.getElementById("choices")
 var startBtn = document.getElementById("startBtn")
 var startPage = document.getElementById("startPage")
@@ -74,15 +66,19 @@ function nextQuestion() {
         console.log("initials & score")
         question.innerText ="i need to put a score and initials log here" // score & initials function?
         return
-    } 
-
-    
+    }  
 }
 startBtn.addEventListener("click", startQuiz);
-function userLog (){
-
-}
 
 //timer function
 
-// 
+function userLog (){
+    // make a timer.
+    // have timer start on click.
+    // display answer result alerts.
+    // display final score
+    // take in user initials.
+    // cache scores .
+    // log and rotate 5 highest scores as they change. (how tf?)
+    // display high score rankings.
+}
