@@ -5,14 +5,17 @@ hover effects on list items.
 :root {
     display:flex;
     justify-content: center;
+    align-items: center;
     text-align: center;
 }
 * {
+    margin-top: 50px;
     background-color: beige;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-#startbtn {
-    display: flex;
-    flex-direction: column;
+#startBtn {
+    background-color: rgb(167, 119, 212);
+    color: azure;
 }
 .hide {
     display: none;
@@ -20,10 +23,21 @@ hover effects on list items.
 #startpage {
 
 }
+
+h1 {
+    text-decoration: underline;
+
+}
 p {
    border-style: double;
    border-top-style: none;
    padding: 10px;
    margin: 10px;
+   max-width: 400px;
+
 }
+
+li {
+    background-color: rgb(250, 249, 184);
+}   
 

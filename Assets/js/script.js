@@ -41,22 +41,13 @@ var quizQuestions = [{
 ]
 
 function startQuiz() {
-    console.log("im clicked")
-    // startPage.setAttribute("class", "hide")
-    // if (this.value === quizQuestions[index].correct) {
-    //     console.log('Correct!')
-    // } else {
-    //     console.log('Incorrect!')
-    //     timeLeft -= 5;
-    // }
     startPage.classList.add("hide")
     questionContainer.classList.remove("hide")
+    console.log("im clicked")
     quizRender(index)    // function to run through the quiz questions
-
-
 }
-// forEachloop
-//quizRender(quizQuestions[0])
+
+// forEachloop used
 function quizRender(index) {
     var currentQuestion = quizQuestions[index]
     question.innerText = currentQuestion.question
@@ -71,36 +62,27 @@ function quizRender(index) {
             console.log(li.textContent)
             nextQuestion()
         })
-
-
     })
-    //for ( var i = 0; i < choiceList.length; i++) {
 }
-
 
 function nextQuestion() {
     index++
     userInput.innerHTML = ""
-    if (index < quizQuestions.length) {
-        
+    if (index < quizQuestions.length) { 
         quizRender(index)
     } else {
-        console.log("done")
-        question.innerText =""
+        console.log("initials & score")
+        question.innerText ="i need to put a score and initials log here" // score & initials function?
         return
-    }
+    } 
+
+    
 }
 startBtn.addEventListener("click", startQuiz);
+function userLog (){
 
+}
 
-    // for (var i = 0; i < currentQuestion.choices.length; i++) {
-    //     var li = document.createElement('li')
-    //     var choice = quizQuestions.choices[i]
-    //     li.setAttribute("class", "choice")
-    //     li.innerText = choice[0].question[i]
-    //     li.onclick = checkClick
-    //     userInput.appendChild(li)
-    //     quizRender()
-    //     console.log('loop')
-    // }
-    //button to start countdown
+//timer function
+
+// 
