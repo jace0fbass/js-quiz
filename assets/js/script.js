@@ -52,12 +52,15 @@ function quizRender(index) {
         userInput.appendChild(li)
         li.addEventListener("click", function () {
             // add if else here
-          if (userInput === false) {
-            return
-          } 
-            console.log(li.textContent)
-            nextQuestion()
-        })
+          if ( choice === quizQuestions[index].correct) {
+            score++
+        } else {
+            timeLeft -= 5;
+            timeLeft.textContent = timeLeft;
+        }
+        console.log(li.textContent)
+        nextQuestion()
+    })
     })
 }
 
@@ -68,7 +71,7 @@ function nextQuestion() {
         quizRender(index)
     } else {
         console.log("initials & score")
-        question.innerText ="i need to put a score and initials log here" // score & initials function?
+        question.innerText ="i need to put a score and initials log here" 
         return // call function for initials
     }  
 }
