@@ -12,6 +12,16 @@
 .hide {
     display: none;
 }
+#startBtn {
+    background-color: rgb(167, 119, 212);
+    color: azure;
+    padding: 15px;
+}
+
+#question {
+    font-size: large;
+    font-weight: 200;
+}
 
 h1 {
     text-decoration: underline;
