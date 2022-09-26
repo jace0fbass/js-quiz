@@ -39,7 +39,7 @@ function startQuiz() {
     quizRender(index)    // function to run through the quiz questions
 }
 
-// forEachloop used
+// forEach loop used
 function quizRender(index) {
     var currentQuestion = quizQuestions[index]
     question.innerText = currentQuestion.question
@@ -51,6 +51,10 @@ function quizRender(index) {
         li.innerText = choice
         userInput.appendChild(li)
         li.addEventListener("click", function () {
+            // add if else here
+          if (userInput === false) {
+            return
+          } 
             console.log(li.textContent)
             nextQuestion()
         })
@@ -60,12 +64,12 @@ function quizRender(index) {
 function nextQuestion() {
     index++
     userInput.innerHTML =""
-    if (index < quizQuestions.length) { 
+    if (index < quizQuestions.length ) { 
         quizRender(index)
     } else {
         console.log("initials & score")
         question.innerText ="i need to put a score and initials log here" // score & initials function?
-        return
+        return // call function for initials
     }  
 }
 startBtn.addEventListener("click", startQuiz)

@@ -34,6 +34,9 @@ p {
    margin: 10px;
    max-width: 400px;
 }
+title {
+    display: none;
+}
 
  
 
