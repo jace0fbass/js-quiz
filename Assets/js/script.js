@@ -59,7 +59,7 @@ function quizRender(index) {
 
 function nextQuestion() {
     index++
-    userInput.innerHTML = ""
+    userInput.innerHTML =""
     if (index < quizQuestions.length) { 
         quizRender(index)
     } else {
