@@ -56,6 +56,7 @@ function quizRender(index) {
         })
     })
 }
+startBtn.addEventListener("click", startQuiz)
 
 function nextQuestion() {
     index++
@@ -68,7 +69,6 @@ function nextQuestion() {
         return
     }  
 }
-startBtn.addEventListener("click", startQuiz)
 
 //timer function
 
