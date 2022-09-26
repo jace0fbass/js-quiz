@@ -68,11 +68,11 @@ function nextQuestion() {
         return
     }  
 }
-startBtn.addEventListener("click", startQuiz);
+startBtn.addEventListener("click", startQuiz)
 
 //timer function
 
-function userLog (){
+//function userLog (){
     // make a timer.
     // have timer start on click.
     // display answer result alerts.
@@ -81,4 +81,4 @@ function userLog (){
     // cache scores .
     // log and rotate 5 highest scores as they change. (how tf?)
     // display high score rankings.
-}
+//}

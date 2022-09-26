@@ -5,10 +5,11 @@ https://jace0fbass.github.io/js-quiz/
 
 
 ## Description
+In this module challenge I have created a javascript quiz with a timer that counts down and removes extra time when a question is answered wrong. I have learned about different types of loops during this challenge.
 
 
-
-
+## Screenshot
+<img src="Screenshot 2022-09-25 211230.jpg" alt="An image of the start screen of the challenge.">
 
 
 
