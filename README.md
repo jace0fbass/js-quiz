@@ -1,5 +1,9 @@
 # 04 Web APIs: Code Quiz
 
+
+--- NEEDS: IF/ELSE FOR RIGHT OR WRONG. NEEDS TIMER. NEEDS INTIALS & SCORE STROED AND DISPLAYED. ---
+
+
 ## Deployed Link 
 https://jace0fbass.github.io/js-quiz/
 
