@@ -31,7 +31,7 @@ var quizQuestions = [{
     choices: ['Quotes', 'Booleans', 'Alerts', 'Numbers']
 }
 ]
-
+// hide the button, <h1>, and <p> and start showing the quiz questions.
 function startQuiz() {
     startPage.classList.add("hide")
     questionContainer.classList.remove("hide")
@@ -39,7 +39,7 @@ function startQuiz() {
     quizRender(index)    // function to run through the quiz questions
 }
 
-// forEach loop used
+// forEach loop used here
 function quizRender(index) {
     var currentQuestion = quizQuestions[index]
     question.innerText = currentQuestion.question
@@ -75,17 +75,16 @@ function nextQuestion() {
         return // call function for initials
     }  
 }
+
+//function to store user score and initials
+function userResult()
+
+// button to start the quiz
 startBtn.addEventListener("click", startQuiz)
 
-//timer function
-
-//function userLog (){
-    // make a timer.
     // have timer start on click.
     // display answer result alerts.
     // display final score
     // take in user initials.
-    // cache scores .
-    // log and rotate 5 highest scores as they change. (how tf?)
+    // cache scores.
     // display high score rankings.
-//}
