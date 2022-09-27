@@ -76,11 +76,13 @@ function nextQuestion() {
     }  
 }
 
-//function to store user score and initials
-function userResult()
-
 // button to start the quiz
 startBtn.addEventListener("click", startQuiz)
+
+//function to store user score and initials
+function userResult() {
+    
+}
 
     // have timer start on click.
     // display answer result alerts.
