@@ -67,7 +67,7 @@ function quizRender(index) {
 function nextQuestion() {
     index++
     userInput.innerHTML =""
-    if (index < quizQuestions.length ) { 
+    if (index < quizQuestions.length) { 
         quizRender(index)
     } else {
         console.log("initials & score")
@@ -80,9 +80,16 @@ function nextQuestion() {
 startBtn.addEventListener("click", startQuiz)
 
 //function to store user score and initials
-function userResult() {
-    
-}
+//function userResult() {}
+
+//store and call results
+window.localStorage.setItem("", JSON.stringify())
+// let = window.localStorage.getItem();
+
+
+
+
+
 
     // have timer start on click.
     // display answer result alerts.
