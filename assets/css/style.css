@@ -16,6 +16,9 @@
     background-color: rgb(167, 119, 212);
     color: azure;
     padding: 15px;
+    border-radius: 10%;
+    border-style: double;
+    margin: 10px;
 }
 
 #question {
@@ -41,5 +44,14 @@ title {
 div {
     cursor:default;
 }
- 
+
+li {
+    background-color: rgb(167, 119, 212);
+    color: azure;
+    border-color: black;
+    border-radius: 10%;
+    border-style: double;
+    padding: 10px;
+    margin: 5px;
+}
 
