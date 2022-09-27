@@ -87,6 +87,14 @@ window.localStorage.setItem("", JSON.stringify())
 // let = window.localStorage.getItem();
 
 
+var endOfTime = setTimeout(gameOver, 5000);
+console.log("time")
+
+function quizTimer() {
+}
+function gameOver() {
+    alert("Game Over!");
+}
 
 
 
