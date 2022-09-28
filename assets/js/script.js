@@ -55,11 +55,6 @@ function startQuiz() {
         quizTimer.innerHTML = seconds;
         time--;
         }
-    
-
-
-
-
 }
 
 // forEach loop used here
@@ -78,8 +73,8 @@ function quizRender(index) {
             if (choice === quizQuestions[index].correct) {
                 score++
             } else {
-                timeLeft -= 5;
-                timeLeft.textContent = timeLeft;
+                time -= 10;
+                time.textContent = timeLeft;
             }
             console.log(li.textContent)
             nextQuestion()
