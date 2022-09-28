@@ -1,7 +1,6 @@
 # 04 Web APIs: Code Quiz
 
-
---- NEEDS TIMER. NEEDS INTIALS & SCORE STROED AND DISPLAYED. ---
+--- NEEDS INTIALS & SCORE STROED AND DISPLAYED. ---
 
 
 ## Deployed Link 

@@ -5,6 +5,11 @@ var questionContainer = document.getElementById("quizQuestions")
 var index = 0
 var score = 0
 var timeLeft = 60
+var time = timeLeft * 60;
+var timer;
+var startingMinutes = 1;
+
+
 var quizQuestions = [{
     question: "Commonly used data types DO NOT include:",
     correct: 'Alerts',
@@ -37,6 +42,24 @@ function startQuiz() {
     questionContainer.classList.remove("hide")
     console.log("im clicked")
     quizRender(index)    // function to run through the quiz questions
+    
+    setInterval(updateCountdown, 1000);
+        
+    const quizTimer = document.getElementById("quizTimer");
+    
+    function updateCountdown() {
+        const minutes = Math.floor(time / 60);
+        let seconds = time % 60;
+        seconds = seconds < 60 ? '0' + seconds : seconds;
+        
+        quizTimer.innerHTML = seconds;
+        time--;
+        }
+    
+
+
+
+
 }
 
 // forEach loop used here
@@ -52,49 +75,52 @@ function quizRender(index) {
         userInput.appendChild(li)
         li.addEventListener("click", function () {
             // add if else here
-          if ( choice === quizQuestions[index].correct) {
-            score++
-        } else {
-            timeLeft -= 5;
-            timeLeft.textContent = timeLeft;
-        }
-        console.log(li.textContent)
-        nextQuestion()
-    })
+            if (choice === quizQuestions[index].correct) {
+                score++
+            } else {
+                timeLeft -= 5;
+                timeLeft.textContent = timeLeft;
+            }
+            console.log(li.textContent)
+            nextQuestion()
+        })
     })
 }
 
 function nextQuestion() {
     index++
-    userInput.innerHTML =""
-    if (index < quizQuestions.length) { 
+    userInput.innerHTML = ""
+    if (index < quizQuestions.length) {
         quizRender(index)
     } else {
         console.log("initials & score")
-        question.innerText ="i need to put a score and initials log here" 
+        question.innerText = "i need to put a score and initials log here"
         return // call function for initials
-    }  
+    }
 }
 
-// button to start the quiz
-startBtn.addEventListener("click", startQuiz)
-
-//function to store user score and initials
-//function userResult() {}
-
-//store and call results
-window.localStorage.setItem("", JSON.stringify())
-// let = window.localStorage.getItem();
-
-
-var endOfTime = setTimeout(gameOver, 5000);
-console.log("time")
-
-function quizTimer() {
-}
-function gameOver() {
-    alert("Game Over!");
-}
+// button to start the quiz and timer
+startBtn.addEventListener("click", startQuiz); {
+    
+    var endOfTime = setTimeout(gameOver, 60000);
+    console.log("time");
+    
+    function gameOver() {
+        alert("Game Over!");
+    }
+    
+   ///////
+    
+        
+    }
+    //function to store user score and initials
+    //function userResult() {}
+    
+    //store and call results
+    window.localStorage.setItem("", JSON.stringify())
+    // let = window.localStorage.getItem();
+    
+    
 
 
 
