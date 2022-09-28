@@ -92,7 +92,7 @@ function nextQuestion() {
         quizRender(index)
     } else {
         console.log("initials & score")
-        question.innerText = "i need to put a score and initials log here"
+        question.innerText = "i need to put a score and initials log here and stop the timer."
         return // call function for initials
     }
 }
