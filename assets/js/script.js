@@ -9,7 +9,6 @@ var time = timeLeft * 60;
 var timer;
 var startingMinutes = 1;
 
-
 var quizQuestions = [{
     question: "Commonly used data types DO NOT include:",
     correct: 'Alerts',
@@ -54,7 +53,8 @@ function startQuiz() {
         
         quizTimer.innerHTML = seconds;
         time--;
-        }
+    }
+    
 }
 
 // forEach loop used here
@@ -70,6 +70,9 @@ function quizRender(index) {
         userInput.appendChild(li)
         li.addEventListener("click", function () {
             // add if else here
+            if (time <= 00) {
+                
+            }
             if (choice === quizQuestions[index].correct) {
                 score++
             } else {
@@ -96,17 +99,6 @@ function nextQuestion() {
 
 // button to start the quiz and timer
 startBtn.addEventListener("click", startQuiz); {
-    
-    var endOfTime = setTimeout(gameOver, 60000);
-    console.log("time");
-    
-    function gameOver() {
-        alert("Game Over!");
-    }
-    
-   ///////
-    
-        
     }
     //function to store user score and initials
     //function userResult() {}
