@@ -49,12 +49,17 @@ function startQuiz() {
     function updateCountdown() {
         const minutes = Math.floor(time / 60);
         let seconds = time % 60;
-        seconds = seconds < 60 ? '0' + seconds : seconds;
+        seconds = seconds < 60 ? + seconds : seconds;
         
         quizTimer.innerHTML = seconds;
         time--;
     }
-    
+    function stopTimer() {
+        window.clearInterval(quizTimer)
+        if (time <= 01);
+        return 
+    }
+
 }
 
 // forEach loop used here
@@ -80,7 +85,8 @@ function quizRender(index) {
                 time.textContent = timeLeft;
             }
             console.log(li.textContent)
-            nextQuestion()
+            nextQuestion(); {
+            }
         })
     })
 }
@@ -92,8 +98,10 @@ function nextQuestion() {
         quizRender(index)
     } else {
         console.log("initials & score")
-        question.innerText = "i need to put a score and initials log here and stop the timer."
+        question.innerText = "Score: " + score
         return // call function for initials
+    }
+    if (index > quizQuestions.length) {
     }
 }
 
@@ -104,14 +112,21 @@ startBtn.addEventListener("click", startQuiz); {
     //function userResult() {}
     
     //store and call results
-    window.localStorage.setItem("", JSON.stringify())
-    // let = window.localStorage.getItem();
-    
-    
+var storedScore = function() {
+    localStorage.setItem("score", JSON.stringify(score));
+}
+var storedInits = function(initials) {
+    localStorage.setItem("score", JSON.stringify(initials));
+}
+
+function showStoScore() {
+    var showScore = localStorage.getItem("score")
+    var showInits = localStorage.getItem("intiials")
+}
 
 
 
-
+// let = window.localStorage.getItem();
     // have timer start on click.
     // display answer result alerts.
     // display final score
