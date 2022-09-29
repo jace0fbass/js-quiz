@@ -5,8 +5,9 @@ var questionContainer = document.getElementById("quizQuestions")
 var index = 0
 var score = 0
 var timeLeft = 60
-var time = timeLeft * 60;
+var time = 60;
 var timer;
+var intervalId;
 var startingMinutes = 1;
 
 var quizQuestions = [{
@@ -42,24 +43,17 @@ function startQuiz() {
     console.log("im clicked")
     quizRender(index)    // function to run through the quiz questions
     
-    setInterval(updateCountdown, 1000);
+    intervalId = setInterval(updateCountdown, 1000);
         
     const quizTimer = document.getElementById("quizTimer");
     
     function updateCountdown() {
-        const minutes = Math.floor(time / 60);
-        let seconds = time % 60;
-        seconds = seconds < 60 ? + seconds : seconds;
-        
-        quizTimer.innerHTML = seconds;
         time--;
-    }
-    function stopTimer() {
-        window.clearInterval(quizTimer)
-        if (time <= 01);
+        quizTimer.innerHTML = time;
+        if (time <= 0 || choice > quizQuestions[index])//////////
+            window.clearInterval(intervalId)
         return 
     }
-
 }
 
 // forEach loop used here
