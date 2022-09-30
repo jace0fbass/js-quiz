@@ -5,10 +5,10 @@ var questionContainer = document.getElementById("quizQuestions")
 var index = 0
 var score = 0
 var timeLeft = 60
-var time = 60;
-var timer;
-var intervalId;
-var startingMinutes = 1;
+var time = 60
+var timer
+var intervalId
+var startingMinutes = 1
 
 var quizQuestions = [{
     question: "Commonly used data types DO NOT include:",
@@ -42,17 +42,17 @@ function startQuiz() {
     questionContainer.classList.remove("hide")
     console.log("im clicked")
     quizRender(index)    // function to run through the quiz questions
-    
+
     intervalId = setInterval(updateCountdown, 1000);
-        
+
     const quizTimer = document.getElementById("quizTimer");
-    
+
     function updateCountdown() {
         time--;
         quizTimer.innerHTML = time;
-        if (time <= 0 || choice > quizQuestions[index])//////////
+        if (time <= 0 || index > quizQuestions[index])
             window.clearInterval(intervalId)
-        return 
+        
     }
 }
 
@@ -69,8 +69,8 @@ function quizRender(index) {
         userInput.appendChild(li)
         li.addEventListener("click", function () {
             // add if else here
-            if (time <= 00) {
-                
+            if (time <= 0) {
+
             }
             if (choice === quizQuestions[index].correct) {
                 score++
@@ -93,23 +93,24 @@ function nextQuestion() {
     } else {
         console.log("initials & score")
         question.innerText = "Score: " + score
-        return // call function for initials
-    }
-    if (index > quizQuestions.length) {
+    } if  (quizQuestions[index] > quizQuestions.length) {
+        clearInterval(intervalId);
+        console.log("clear")
     }
 }
 
+
 // button to start the quiz and timer
 startBtn.addEventListener("click", startQuiz); {
-    }
-    //function to store user score and initials
-    //function userResult() {}
-    
-    //store and call results
-var storedScore = function() {
+}
+//function to store user score and initials
+//function userResult() {}
+
+//store and call results
+var storedScore = function () {
     localStorage.setItem("score", JSON.stringify(score));
 }
-var storedInits = function(initials) {
+var storedInits = function (initials) {
     localStorage.setItem("score", JSON.stringify(initials));
 }
 
