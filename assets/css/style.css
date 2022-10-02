@@ -15,11 +15,9 @@
 
 #quizTimer {
     text-size-adjust: large;
-}
+} 
 
-
-
-#startBtn {
+#startBtn, #userBtn {
     background-color: rgb(197, 193, 153);
     color: black;
     padding: 15px;

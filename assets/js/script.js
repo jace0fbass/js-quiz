@@ -2,6 +2,7 @@ var userInput = document.getElementById("choices")
 var startBtn = document.getElementById("startBtn")
 var startPage = document.getElementById("startPage")
 var userBtn = document.getElementById("userBtn")
+var endInits = document.getElementById("endInits")
 var questionContainer = document.getElementById("quizQuestions")
 var index = 0
 var score = 0
@@ -100,29 +101,30 @@ function nextQuestion() {
 startBtn.addEventListener("click", startQuiz); {
 }
 
-
-
-
-
-// DOING THIS LOCAL STORAGE WRONG.
-var showScore = function () {
-    localStorage.getItem("score");
-}
-var showInits = function () {
-    localStorage.getItem("intiials")
-    console.log("get")
-
-    // need to store the displayed score with the initials when the user clicks save.
-    // need to display highscores.
-
-    function getInits() { //need to connect to a text area in html
-        var storedInits = function () {
-            localStorage.setItem("initials", JSON.stringify(storedInits));
+let text;
+let textarea = document.getElementById('textarea');
+let userData = document.getElementById("#userData");
+userBtn.addEventListener('click', function getText() {
+    localStorage.setItem("textarea", JSON.stringify(setInits));
             console.log("set")
-        }
-    }
+    text = textarea;
+    lastPage.classList.add("hide")
+    final.classList.remove("hide")
+    endInits.classList.remove("hide")
+    localStorage.getItem("intiials", JSON.stringify(getInits));
+    console.log("get")
+    endInits.innerText = initials
+});
+var initials = setAttribute(getInits, )
+var getInits = function () {
+    localStorage.getItem("intiials", JSON.stringify(getInits));
+    //console.log("get")
 }
-//userBtn.addEventListener("click", )
+
+var setInits = function () {
+    localStorage.setItem("initials", JSON.stringify(setInits));
+    //console.log("set")
+    }
 
 
 
