@@ -91,26 +91,40 @@ function nextQuestion() {
     } else {
         console.log("initials & score")
         window.clearInterval(intervalId)
-        question.innerText = "Score: " + score 
-
-        // put intials log here?
+        question.innerText = "Score: " + score
+        lastPage.classList.remove("hide")     
     }
 }
+
+
+// need to hide quiz when its done and display text entry.
+
+var showScore = function() {
+    localStorage.getItem("score"); 
+}
+var showInits = function() {
+    localStorage.getItem("intiials")
+    console.log("get")
+        // need to have user enter initials.
+        // need to store the displayed score with the initials when the user clicks save.
+        // need to display highscores.
+    function getInits() { //need to connect to a text area in html
+        var storedScore = function () {
+            localStorage.setItem("score", JSON.stringify(storedScore));
+        }
+        var storedInits = function () {
+            localStorage.setItem("score", JSON.stringify(storedInits));
+            console.log("set")
+        }
+        
+    }
+    getInits()
+    }
+        
+    
+
 
 // button to start the quiz and timer
 startBtn.addEventListener("click", startQuiz); {
 }
 
-//function to store user score and initials
-    //store and call results
-
-var storedScore = function () {
-    localStorage.setItem("score", JSON.stringify(score));
-}
-var storedInits = function () {
-    localStorage.setItem("score", JSON.stringify(initials));
-}
-function showStoScore() {
-    var showScore = localStorage.getItem("score")
-    var showInits = localStorage.getItem("intiials")
-}
