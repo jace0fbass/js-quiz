@@ -1,6 +1,7 @@
 var userInput = document.getElementById("choices")
 var startBtn = document.getElementById("startBtn")
 var startPage = document.getElementById("startPage")
+var userBtn = document.getElementById("userBtn")
 var questionContainer = document.getElementById("quizQuestions")
 var index = 0
 var score = 0
@@ -52,9 +53,9 @@ function startQuiz() {
         quizTimer.innerHTML = time;
         if (time <= 0 || index > quizQuestions[index]) {
             window.clearInterval(intervalId);
-        } 
+        }
     }
-    
+
 }
 
 // forEach loop used here
@@ -92,7 +93,7 @@ function nextQuestion() {
         console.log("initials & score")
         window.clearInterval(intervalId)
         question.innerText = "Score: " + score
-        lastPage.classList.remove("hide")     
+        lastPage.classList.remove("hide")
     }
 }
 // button to start the quiz and timer
@@ -104,29 +105,26 @@ startBtn.addEventListener("click", startQuiz); {
 
 
 // DOING THIS LOCAL STORAGE WRONG.
-var showScore = function() {
-    localStorage.getItem("score"); 
+var showScore = function () {
+    localStorage.getItem("score");
 }
-var showInits = function() {
+var showInits = function () {
     localStorage.getItem("intiials")
     console.log("get")
-        // need to have user enter initials.
-        // need to store the displayed score with the initials when the user clicks save.
-        // need to display highscores.
+
+    // need to store the displayed score with the initials when the user clicks save.
+    // need to display highscores.
+
     function getInits() { //need to connect to a text area in html
-        var storedScore = function () {
-            localStorage.setItem("score", JSON.stringify(storedScore));
-        }
         var storedInits = function () {
-            localStorage.setItem("score", JSON.stringify(storedInits));
+            localStorage.setItem("initials", JSON.stringify(storedInits));
             console.log("set")
         }
-        
     }
-    getInits()
-    }
-        
-    
+}
+//userBtn.addEventListener("click", )
+
+
 
 
 
