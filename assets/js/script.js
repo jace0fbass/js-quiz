@@ -11,6 +11,7 @@ var time = 60
 var timer
 var intervalId
 var startingMinutes = 1
+var textarea = document.getElementById("textarea")
 
 var quizQuestions = [{
     question: "Commonly used data types DO NOT include:",
@@ -102,7 +103,7 @@ startBtn.addEventListener("click", startQuiz); {
 }
 
 let text;
-let textarea = document.getElementById('textarea');
+let initials = document.getElementById('textarea');
 let userData = document.getElementById("#userData");
 userBtn.addEventListener('click', function getText() {
     localStorage.setItem("textarea", JSON.stringify(setInits));
@@ -113,18 +114,18 @@ userBtn.addEventListener('click', function getText() {
     endInits.classList.remove("hide")
     localStorage.getItem("intiials", JSON.stringify(getInits));
     console.log("get")
-    endInits.innerText = initials
+    endInits.innerText = "fml"
 });
-var initials = setAttribute(getInits, )
+var setInits = function () {
+    localStorage.setItem("initials", JSON.stringify(setInits));
+    //console.log("set")
+    }
+    
 var getInits = function () {
     localStorage.getItem("intiials", JSON.stringify(getInits));
     //console.log("get")
 }
 
-var setInits = function () {
-    localStorage.setItem("initials", JSON.stringify(setInits));
-    //console.log("set")
-    }
 
 
 
