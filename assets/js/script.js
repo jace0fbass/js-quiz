@@ -95,10 +95,15 @@ function nextQuestion() {
         lastPage.classList.remove("hide")     
     }
 }
+// button to start the quiz and timer
+startBtn.addEventListener("click", startQuiz); {
+}
 
 
-// need to hide quiz when its done and display text entry.
 
+
+
+// DOING THIS LOCAL STORAGE WRONG.
 var showScore = function() {
     localStorage.getItem("score"); 
 }
@@ -124,7 +129,4 @@ var showInits = function() {
     
 
 
-// button to start the quiz and timer
-startBtn.addEventListener("click", startQuiz); {
-}
 
