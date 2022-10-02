@@ -50,10 +50,11 @@ function startQuiz() {
     function updateCountdown() {
         time--;
         quizTimer.innerHTML = time;
-        if (time <= 0 || index > quizQuestions[index])
-            window.clearInterval(intervalId)
-        
+        if (time <= 0 || index > quizQuestions[index]) {
+            window.clearInterval(intervalId);
+        } 
     }
+    
 }
 
 // forEach loop used here
@@ -68,10 +69,7 @@ function quizRender(index) {
         li.innerText = choice
         userInput.appendChild(li)
         li.addEventListener("click", function () {
-            // add if else here
-            if (time <= 0) {
-
-            }
+            // add if else her
             if (choice === quizQuestions[index].correct) {
                 score++
             } else {
@@ -92,39 +90,27 @@ function nextQuestion() {
         quizRender(index)
     } else {
         console.log("initials & score")
-        question.innerText = "Score: " + score
-    } if  (quizQuestions[index] > quizQuestions.length) {
-        clearInterval(intervalId);
-        console.log("clear")
+        window.clearInterval(intervalId)
+        question.innerText = "Score: " + score 
+
+        // put intials log here?
     }
 }
-
 
 // button to start the quiz and timer
 startBtn.addEventListener("click", startQuiz); {
 }
-//function to store user score and initials
-//function userResult() {}
 
-//store and call results
+//function to store user score and initials
+    //store and call results
+
 var storedScore = function () {
     localStorage.setItem("score", JSON.stringify(score));
 }
-var storedInits = function (initials) {
+var storedInits = function () {
     localStorage.setItem("score", JSON.stringify(initials));
 }
-
 function showStoScore() {
     var showScore = localStorage.getItem("score")
     var showInits = localStorage.getItem("intiials")
 }
-
-
-
-// let = window.localStorage.getItem();
-    // have timer start on click.
-    // display answer result alerts.
-    // display final score
-    // take in user initials.
-    // cache scores.
-    // display high score rankings.
