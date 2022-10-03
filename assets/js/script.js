@@ -101,33 +101,31 @@ function nextQuestion() {
 // button to start the quiz and timer
 startBtn.addEventListener("click", startQuiz); {
 }
-
+var userText = document.getElementById("usertext");
 let text;
 let initials = document.getElementById('textarea');
-let userData = document.getElementById("#userData");
+let userData = document.getElementById("userData");
+
 userBtn.addEventListener('click', function getText() {
     localStorage.setItem("textarea", JSON.stringify(setInits));
-            console.log("set")
+    console.log("set")
     text = textarea;
     lastPage.classList.add("hide")
     final.classList.remove("hide")
     endInits.classList.remove("hide")
     localStorage.getItem("intiials", JSON.stringify(getInits));
     console.log("get")
-    endInits.innerText = "fml"
-});
+
+   
 var setInits = function () {
     localStorage.setItem("initials", JSON.stringify(setInits));
-    //console.log("set")
     }
-    
 var getInits = function () {
     localStorage.getItem("intiials", JSON.stringify(getInits));
-    //console.log("get")
 }
+var newNode = document.createElement('div');
+newNode.innerHTML = userText;
+userText.appendChild(text);
 
 
-
-
-
-
+})
