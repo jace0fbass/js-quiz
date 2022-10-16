@@ -3,6 +3,7 @@ var startBtn = document.getElementById("startBtn")
 var startPage = document.getElementById("startPage")
 var userBtn = document.getElementById("userBtn")
 var endInits = document.getElementById("endInits")
+
 var questionContainer = document.getElementById("quizQuestions")
 var index = 0
 var score = 0
@@ -103,16 +104,16 @@ startBtn.addEventListener("click", startQuiz); {
 }
 var userText = document.getElementById("usertext");
 let text;
-let initials = document.getElementById('textarea');
+let initials = document.getElementById("textarea");
 let userData = document.getElementById("userData");
 
-userBtn.addEventListener('click', function getText() {
+userBtn.addEventListener("click", function getText() {
     localStorage.setItem("textarea", JSON.stringify(setInits));
     console.log("set")
     text = textarea;
     lastPage.classList.add("hide")
     final.classList.remove("hide")
-    endInits.classList.remove("hide")
+    
     localStorage.getItem("intiials", JSON.stringify(getInits));
     console.log("get")
 
@@ -120,12 +121,14 @@ userBtn.addEventListener('click', function getText() {
 var setInits = function () {
     localStorage.setItem("initials", JSON.stringify(setInits));
     }
+    console.log("set2")
 var getInits = function () {
     localStorage.getItem("intiials", JSON.stringify(getInits));
 }
-var newNode = document.createElement('div');
+console.log("get2")
+var newNode = document.getElementById("endInits");
 newNode.innerHTML = userText;
-userText.appendChild(text);
+userText.appendTo(text);
 
 
 })
