@@ -2,8 +2,8 @@ var userInput = document.getElementById("choices")
 var startBtn = document.getElementById("startBtn")
 var startPage = document.getElementById("startPage")
 var userBtn = document.getElementById("userBtn")
-var endInits = document.getElementById("endInits")
-
+let endInits = document.getElementById("endInits")
+var final = document.getElementById("final")
 var questionContainer = document.getElementById("quizQuestions")
 var index = 0
 var score = 0
@@ -12,7 +12,12 @@ var time = 60
 var timer
 var intervalId
 var startingMinutes = 1
-var textarea = document.getElementById("textarea")
+var textarea = document.querySelector("textarea")
+
+var userText = document.getElementById("userText");
+let text;
+let initials = document.getElementById("textarea");
+let userData = document.getElementById("userData");
 
 var quizQuestions = [{
     question: "Commonly used data types DO NOT include:",
@@ -97,38 +102,35 @@ function nextQuestion() {
         window.clearInterval(intervalId)
         question.innerText = "Score: " + score
         lastPage.classList.remove("hide")
+
     }
 }
 // button to start the quiz and timer
 startBtn.addEventListener("click", startQuiz); {
 }
-var userText = document.getElementById("usertext");
-let text;
-let initials = document.getElementById("textarea");
-let userData = document.getElementById("userData");
 
 userBtn.addEventListener("click", function getText() {
-    localStorage.setItem("textarea", JSON.stringify(setInits));
-    console.log("set")
-    text = textarea;
     lastPage.classList.add("hide")
     final.classList.remove("hide")
-    
-    localStorage.getItem("intiials", JSON.stringify(getInits));
+    localStorage.setItem("textarea1", userText.value); // local storage here
+    console.log("set")
+    text = textarea;
+    document.getElementById().appendChild(localStorage.getItem("textarea1", userText.value));
     console.log("get")
 
-   
-var setInits = function () {
-    localStorage.setItem("initials", JSON.stringify(setInits));
+
+
+    var setInits = function () {
+        localStorage.setItem("textarea1.1", JSON.stringify(setInits));
     }
     console.log("set2")
-var getInits = function () {
-    localStorage.getItem("intiials", JSON.stringify(getInits));
-}
-console.log("get2")
-var newNode = document.getElementById("endInits");
-newNode.innerHTML = userText;
-userText.appendTo(text);
-
-
+    var getInits = function () {
+        localStorage.getItem("textarea1", JSON.stringify(getInits));
+    }
+    console.log("get2")
+   
+    
+     // var newNode = document.getElementById("endInits");
+    // newNode.innerHTML = userText;
+    // endInits = userText.appendTo(text);
 })
