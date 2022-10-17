@@ -115,22 +115,6 @@ userBtn.addEventListener("click", function getText() {
     localStorage.setItem("textarea1", userText.value); // local storage here
     console.log("set")
     text = textarea;
-    document.getElementById().appendChild(localStorage.getItem("textarea1", userText.value));
+    endInits.textContent = localStorage.getItem("textarea1");
     console.log("get")
-
-
-
-    var setInits = function () {
-        localStorage.setItem("textarea1.1", JSON.stringify(setInits));
-    }
-    console.log("set2")
-    var getInits = function () {
-        localStorage.getItem("textarea1", JSON.stringify(getInits));
-    }
-    console.log("get2")
-   
-    
-     // var newNode = document.getElementById("endInits");
-    // newNode.innerHTML = userText;
-    // endInits = userText.appendTo(text);
 })
