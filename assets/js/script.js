@@ -114,7 +114,7 @@ userBtn.addEventListener("click", function getText() {
     final.classList.remove("hide")
     localStorage.setItem("textarea1", userText.value); // local storage here
     console.log("set")
-    text = textarea;
+    //text = textarea;
     endInits.textContent = localStorage.getItem("textarea1");
     console.log("get")
 })
